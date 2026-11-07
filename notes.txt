@@ -1,0 +1,15 @@
+Turn the observations into design choices
+Use the player’s head as the screen origin. crop around it and represent nearby snakes and pellets relative to that point.
+
+Make steering a ring of actions. Define, say, 16 or 32 direction options around the center. 
+The policy picks a direction, and your controller moves the cursor to a point along that ray.
+ Add boost as a separate action. Active boost increases turning radius.  
+
+Use outlines to detect snakes. Low graphics and consistent zoom can make the outlines easier to process.
+ Treat outlines as a helpful cue, then check how well they hold up when snakes overlap.
+
+Handle eye differences as a cue, not a requirement. 
+Eye positions from the skin-selection screen could help identify the selected skin or estimate head orientation. 
+Since eyes vary, keep another cue—such as head shape and body direction—for cases where eye detection fails.
+Keep the visual input consistent. Use the same graphics setting, window size, and crop during training and play.
+
