@@ -19,8 +19,8 @@ with mss() as screen:
         print("No region selected.")
     else:
         region = {
-            "left": int(monitor.left + x),
-            "top": int(monitor.top + y),
+            "left": int(monitor["left"] + x),
+            "top": int(monitor["top"] + y),
             "width": int(width),
             "height": int(height),
         }
